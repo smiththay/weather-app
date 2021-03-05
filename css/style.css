@@ -9,7 +9,8 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    object-fit: cover
+    object-fit: cover;
+    
   }
   .card {
     background: #606060d0;
