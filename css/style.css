@@ -2,13 +2,14 @@ html, body {
     height: 100vh;
 }
 body {
+    display: flex;
     font-family: 'Open Sans', sans-serif;
     background: #222;
     background-image: url('https://source.unsplash.com/1600x900/?landscape');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center;
-    background-size: 100%;
+    object-fit: cover
   }
   .card {
     background: #606060d0;
