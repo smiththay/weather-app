@@ -1,11 +1,12 @@
 const inputZip = document.getElementById("zipSearch");
 const button = document.getElementById("button");
 const city = document.getElementById('city');
-const temp = document.getElementById('temp');
+const tempK = document.getElementById('tempK');
+const tempF = document.getElementById('tempF');
+const tempC = document.getElementById('tempC');
 const description = document.getElementById('description')
+const icons = document.getElementById('icons');
 
-let apiKey="";
-let apiUrl="";
 let zip = "";
 let data ="";
 
@@ -25,10 +26,11 @@ function getWeather(){
         .then(function(json) {
             data = json
             city.innerHTML = data.name;
-            temp.innerHTML = data.main.temp
+            tempK.innerHTML = data.main.temp + " k"
+            tempF.innerHTML = Math.round((data.main.temp - 273.15) * 9 / 5 + 32) + ' F'
+            tempC.innerHTML = Math.round(json.main.temp - 273.15) + ' C'
             description.innerHTML = data.weather[0].description
-
-
+            icons.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
         })
         .catch(function(error){
             console.error('Error:', error);
