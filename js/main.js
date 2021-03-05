@@ -35,7 +35,7 @@ function getWeather(){
             icons.src = 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png';
         })//if it is not a valid zip
         .catch(function(error) {
-            alert("Please Enter A Valid Zip!");
+            //alert("Please Enter A Valid Zip!");
             city.innerHTML= "Please Enter A Valid Zip"
         });
         
