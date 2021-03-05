@@ -14,3 +14,4 @@
    - EventListener for input field 
    - fetch for data from weather api 
    - create equation to convert temp into K, F, and C
+   
